@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainPane" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #41494d;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="balke.c482.ProductAddController">
+   <children>
+      <Label layoutX="12.5" layoutY="14.0" text="Inventory Management System" textFill="#f2f2f2">
+         <font>
+            <Font name="Roboto Medium" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.5" layoutY="47.0" text="Add Product" textFill="#f2f2f2">
+         <font>
+            <Font name="Roboto Medium" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancel" alignment="CENTER" contentDisplay="CENTER" layoutX="622.0" layoutY="560.0" mnemonicParsing="false" onAction="#cancelOnAction" style="-fx-background-color: #bbbbbb; -fx-background-radius: 0;" text="Cancel" textAlignment="CENTER">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" layoutX="560.0" layoutY="560.0" mnemonicParsing="false" onAction="#saveOnAction" style="-fx-background-color: #bbbbbb; -fx-background-radius: 0;" text="Save" textAlignment="CENTER">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="450.0" layoutX="25.0" layoutY="100.0" stroke="#bbbbbb" strokeType="INSIDE" style="-fx-fill: bbbbbb;" width="750.0" />
+      <TextField fx:id="idField" disable="true" layoutX="157.0" layoutY="189.0" prefWidth="200.0" promptText="Auto Generated - Disabled" style="-fx-background-radius: 0; -fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="nameField" layoutX="157.0" layoutY="239.0" prefWidth="200.0" promptText="Name" style="-fx-background-radius: 0; -fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="invField" layoutX="157.0" layoutY="289.0" prefWidth="200.0" promptText="Inv" style="-fx-background-radius: 0; -fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="priceField" layoutX="157.0" layoutY="339.0" prefWidth="200.0" promptText="Price/Cost" style="-fx-background-radius: 0; -fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="maxField" layoutX="157.0" layoutY="389.0" prefWidth="75.0" promptText="Max" style="-fx-background-radius: 0; -fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="minField" layoutX="282.0" layoutY="389.0" prefWidth="75.0" promptText="Min" style="-fx-background-radius: 0; -fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="63.0" layoutY="193.0" text="ID">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="243.0" text="Name">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="293.0" text="Inv">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="343.0" text="Price/Cost">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="393.0" text="Max">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="393.0" text="Min">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="availableParts" layoutX="400.0" layoutY="150.0" prefHeight="150.0" prefWidth="375.0" style="-fx-background-color: bbbbbb;">
+         <columns>
+            <TableColumn fx:id="availablePartsId" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="availablePartsName" prefWidth="115.0" text="Name" />
+            <TableColumn fx:id="availablePartsInv" prefWidth="115.0" text="Inventory Level" />
+            <TableColumn fx:id="availablePartsPrice" prefWidth="115.0" text="Price/Cost per Unit" />
+         </columns>
+      </TableView>
+      <TableView fx:id="usedParts" layoutX="400.0" layoutY="350.0" prefHeight="150.0" prefWidth="375.0" style="-fx-background-color: bbbbbb;">
+         <columns>
+            <TableColumn fx:id="usedPartsId" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="usedPartsName" prefWidth="115.0" text="Name" />
+            <TableColumn fx:id="usedPartsInv" prefWidth="115.0" text="Inventory Level" />
+            <TableColumn fx:id="usedPartsPrice" prefWidth="115.0" text="Price/Cost per Unit" />
+         </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="550.0" layoutY="112.5" onKeyTyped="#searchAvailablePart" prefWidth="200.0" promptText="Search Parts" style="-fx-background-radius: 0; -fx-background-color: #f2f2f2;">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font></TextField>
+      <Button fx:id="remove" alignment="CENTER" contentDisplay="CENTER" layoutX="600.0" layoutY="512.5" mnemonicParsing="false" onAction="#removeOnAction" style="-fx-background-color: #999999; -fx-background-radius: 0;" text="Remove Associated Part" textAlignment="CENTER">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="add" alignment="CENTER" contentDisplay="CENTER" layoutX="700.0" layoutY="312.5" mnemonicParsing="false" onAction="#addOnAction" style="-fx-background-color: #999999; -fx-background-radius: 0;" text="Add" textAlignment="CENTER">
+         <font>
+            <Font name="Roboto" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
