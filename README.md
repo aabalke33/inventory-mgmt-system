@@ -3,6 +3,10 @@ A GUI Inventory Management System built in Java using JavaFX and an MVC design.
 
 Allows for adding, modifying, and deleting parts and products. Has data validation and error-checking capabilities.
 
+## Youtube Video Breakdown
+
+[<img src="https://user-images.githubusercontent.com/22086435/249031408-6f41ba61-fec7-40ef-b6ba-3d399f7af0cf.jpg" width="50%">](https://www.youtube.com/watch?v=mUjGZXsl3kU)
+
 ## Functionality
 ### Main Page
 The main page provides the ability to search, delete and parts and products. Buttons are also available to open Add and Modify pages for both the Parts and Products.
